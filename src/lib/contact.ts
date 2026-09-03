@@ -10,3 +10,5 @@ export function whatsappUrl(message: string = DEFAULT_MSG): string {
 }
 
 export const CLINERA_URL = "https://www.clinera.io";
+export const INSTAGRAM_URL = "https://www.instagram.com/km_estetica_avanzada/";
+export const INSTAGRAM_HANDLE = "@km_estetica_avanzada";

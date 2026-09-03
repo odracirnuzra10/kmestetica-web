@@ -1,6 +1,55 @@
 import Image from "next/image";
 import { Header, Footer } from "@/components/SiteChrome";
-import { CLINERA_URL, WHATSAPP_DISPLAY, whatsappUrl } from "@/lib/contact";
+import {
+  CLINERA_URL,
+  INSTAGRAM_HANDLE,
+  INSTAGRAM_URL,
+  WHATSAPP_DISPLAY,
+  whatsappUrl,
+} from "@/lib/contact";
+
+const beforeAfterCases = [
+  {
+    src: "/img/antes-despues/caso-1.jpg",
+    title: "Perfil facial",
+    treatment: "Armonización y rejuvenecimiento",
+  },
+  {
+    src: "/img/antes-despues/caso-2.jpg",
+    title: "Marcación mandibular",
+    treatment: "Contorno de mandíbula y mentón",
+  },
+  {
+    src: "/img/antes-despues/caso-3.jpg",
+    title: "Ojeras",
+    treatment: "Corrección de ojeras y bolsas",
+  },
+  {
+    src: "/img/antes-despues/caso-4.jpg",
+    title: "Perfil y mentón",
+    treatment: "Proyección de mentón y mandíbula",
+  },
+  {
+    src: "/img/antes-despues/caso-5.jpg",
+    title: "Calidad de piel",
+    treatment: "Tratamiento facial regenerativo",
+  },
+  {
+    src: "/img/antes-despues/caso-6.jpg",
+    title: "Rinomodelación",
+    treatment: "Perfil nasal sin cirugía",
+  },
+  {
+    src: "/img/antes-despues/caso-7.jpg",
+    title: "Nariz de perfil",
+    treatment: "Rinomodelación con ácido hialurónico",
+  },
+  {
+    src: "/img/antes-despues/caso-8.jpg",
+    title: "Mandíbula y mentón",
+    treatment: "Relleno de borde mandibular y mentón",
+  },
+];
 
 const treatments = [
   {
@@ -168,7 +217,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Antes y después placeholder */}
+        {/* Antes y después */}
         <section id="antes-despues" className="bg-marfil">
           <div className="section-pad mx-auto max-w-6xl py-16 md:py-20">
             <p className="text-[0.72rem] font-medium tracking-[0.22em] text-champagne uppercase">
@@ -176,18 +225,37 @@ export default function HomePage() {
             </p>
             <h2 className="mt-3 font-display text-3xl text-negro md:text-4xl">Antes y después</h2>
             <p className="mt-3 max-w-xl text-espresso">
-              Galería clínica en preparación. En la evaluación revisamos casos
-              comparables a tu anatomía y objetivo — sin promesas genéricas.
+              Casos reales de KM Estética Profesional. En la evaluación revisamos
+              referencias comparables a tu anatomía y objetivo — sin promesas genéricas.
             </p>
-            <div className="mt-10 grid gap-4 sm:grid-cols-3">
-              {[1, 2, 3].map((n) => (
-                <div
-                  key={n}
-                  className="flex aspect-[4/5] items-end bg-papel p-4 text-sm text-espresso/70"
-                >
-                  Caso clínico {n} · próximamente
-                </div>
+            <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {beforeAfterCases.map((c) => (
+                <figure key={c.src} className="group overflow-hidden bg-papel">
+                  <div className="relative aspect-square overflow-hidden">
+                    <Image
+                      src={c.src}
+                      alt={`Antes y después — ${c.title}: ${c.treatment}`}
+                      fill
+                      className="object-cover transition duration-500 group-hover:scale-[1.02]"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                  </div>
+                  <figcaption className="border-t border-negro/8 px-4 py-3">
+                    <p className="font-display text-lg text-negro">{c.title}</p>
+                    <p className="mt-1 text-sm text-espresso">{c.treatment}</p>
+                  </figcaption>
+                </figure>
               ))}
+            </div>
+            <div className="mt-10">
+              <a
+                href={whatsappUrl("Hola Katherine, vi los antes y después y quiero agendar evaluación.")}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
+                Quiero un resultado así
+              </a>
             </div>
           </div>
         </section>
@@ -232,13 +300,50 @@ export default function HomePage() {
             </div>
             <div className="relative aspect-[4/5] overflow-hidden bg-marfil">
               <Image
-                src="/img/logo-km-estetica.jpeg"
-                alt="Logo KM Estética Profesional"
+                src="/img/katherine-retrato.jpg"
+                alt="Katherine Meza — KM Estética Profesional"
                 fill
-                className="object-contain p-10"
+                className="object-cover object-[center_15%]"
                 sizes="(max-width: 768px) 100vw, 40vw"
               />
             </div>
+          </div>
+        </section>
+
+        {/* Instagram slide */}
+        <section id="instagram" className="relative overflow-hidden bg-negro text-papel">
+          <div className="absolute inset-0 opacity-35">
+            <Image
+              src="/img/katherine-retrato.jpg"
+              alt=""
+              fill
+              className="object-cover object-[center_20%] grayscale"
+              sizes="100vw"
+              aria-hidden
+            />
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-r from-negro via-negro/85 to-negro/55" aria-hidden />
+          <div className="section-pad relative mx-auto flex max-w-6xl flex-col gap-8 py-20 md:flex-row md:items-end md:justify-between md:py-28">
+            <div className="max-w-xl">
+              <p className="text-[0.72rem] font-medium tracking-[0.22em] text-champagne uppercase">
+                Síguela
+              </p>
+              <h2 className="mt-3 font-display text-3xl md:text-5xl">
+                Casos, día a día y bastidores en Instagram
+              </h2>
+              <p className="mt-4 text-papel/75 leading-relaxed">
+                Más antes y después, rutinas y el trabajo real de Katherine en{" "}
+                <span className="text-papel">{INSTAGRAM_HANDLE}</span>.
+              </p>
+            </div>
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center border border-papel/50 bg-papel px-6 py-3.5 text-sm font-medium text-negro transition hover:bg-marfil"
+            >
+              Ver Instagram
+            </a>
           </div>
         </section>
 
