@@ -69,6 +69,14 @@ export const metadata: Metadata = {
     description: "Medicina estética facial · Los Ángeles · Partner Clinera",
     images: ["/img/katherine-meza.jpg"],
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon", type: "image/png" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: [{ url: "/apple-icon", sizes: "180x180", type: "image/png" }],
+  },
   robots: {
     index: true,
     follow: true,
