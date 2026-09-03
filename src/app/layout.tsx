@@ -99,6 +99,7 @@ const orgJsonLd = {
         addressLocality: "Los Ángeles",
         addressCountry: "CL",
       },
+      telephone: "+56992234618",
       founder: { "@id": `${siteUrl}/#katherine` },
       employee: { "@id": `${siteUrl}/#katherine` },
       knowsAbout: [

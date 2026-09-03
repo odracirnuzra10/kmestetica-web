@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Header, Footer } from "@/components/SiteChrome";
+import { CLINERA_URL, WHATSAPP_DISPLAY, whatsappUrl } from "@/lib/contact";
 
 const treatments = [
   {
@@ -78,7 +79,12 @@ export default function HomePage() {
               <li>Resultados naturales</li>
             </ul>
             <div className="mt-8 flex flex-wrap gap-3">
-              <a href="#agenda" className="btn-primary">
+              <a
+                href={whatsappUrl()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
                 Agendar evaluación
               </a>
               <a href="#antes-despues" className="btn-secondary">
@@ -146,7 +152,12 @@ export default function HomePage() {
                       <span className="font-mono-data text-[0.7rem] text-espresso">{t.validity}</span>
                     </td>
                     <td className="px-4 py-5 text-right">
-                      <a href="#agenda" className="text-sm text-negro underline-offset-4 hover:underline">
+                      <a
+                        href={whatsappUrl(`Hola Katherine, quiero info sobre ${t.name}.`)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-negro underline-offset-4 hover:underline"
+                      >
                         Ver
                       </a>
                     </td>
@@ -203,7 +214,7 @@ export default function HomePage() {
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-5">
                 <a
-                  href="https://www.clinera.io"
+                  href={CLINERA_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-secondary"
@@ -237,24 +248,27 @@ export default function HomePage() {
             <div className="max-w-xl">
               <h2 className="font-display text-3xl md:text-4xl">Agenda tu evaluación</h2>
               <p className="mt-4 text-papel/75 leading-relaxed">
-                Cuéntame tu objetivo. Te respondo con disponibilidad real y los
-                próximos pasos. La operación de agenda está potenciada por Clinera.
+                Escríbeme por WhatsApp al {WHATSAPP_DISPLAY}. Te respondo con
+                disponibilidad real y los próximos pasos. La operación de agenda
+                está potenciada por Clinera.
               </p>
             </div>
             <div className="flex flex-wrap gap-3">
               <a
-                href="https://www.clinera.io"
+                href={whatsappUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center bg-papel px-5 py-3.5 text-sm font-medium text-negro transition hover:bg-marfil"
               >
-                Ir a Clinera
+                WhatsApp {WHATSAPP_DISPLAY}
               </a>
               <a
-                href="mailto:hola@kmestetica.cl"
+                href={CLINERA_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center border border-papel/40 px-5 py-3.5 text-sm font-medium text-papel transition hover:border-papel"
               >
-                Escribir a Katherine
+                Ir a Clinera
               </a>
             </div>
           </div>

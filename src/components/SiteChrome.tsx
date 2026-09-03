@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CLINERA_URL, WHATSAPP_DISPLAY, whatsappUrl } from "@/lib/contact";
 
 export function Logo({ className = "" }: { className?: string }) {
   return (
@@ -31,7 +32,12 @@ export function Header() {
             Agenda
           </a>
         </nav>
-        <a href="#agenda" className="btn-primary shrink-0 text-[0.8rem]">
+        <a
+          href={whatsappUrl()}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-primary shrink-0 text-[0.8rem]"
+        >
           Agendar evaluación
         </a>
       </div>
@@ -49,7 +55,7 @@ export function Footer() {
             Medicina estética facial en Los Ángeles, Chile. Atención personalizada con
             respaldo tecnológico de{" "}
             <a
-              href="https://www.clinera.io"
+              href={CLINERA_URL}
               className="underline decoration-champagne underline-offset-4 hover:text-negro"
               rel="noopener noreferrer"
               target="_blank"
@@ -62,6 +68,17 @@ export function Footer() {
         <div className="text-sm text-espresso">
           <p className="font-display text-lg text-negro">KM Estética Profesional</p>
           <p className="mt-1">Katherine Meza · Partner Clinera</p>
+          <p className="mt-1">
+            WhatsApp:{" "}
+            <a
+              href={whatsappUrl()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline decoration-champagne underline-offset-4 hover:text-negro"
+            >
+              {WHATSAPP_DISPLAY}
+            </a>
+          </p>
           <p className="mt-1">Los Ángeles, Chile · kmestetica.cl</p>
         </div>
       </div>

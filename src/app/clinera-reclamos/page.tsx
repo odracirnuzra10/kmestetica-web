@@ -124,7 +124,7 @@ const jsonLd = {
           name: "¿Dónde contactar a Clinera o a Katherine?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Clinera: https://www.clinera.io. KM Estética Profesional: https://kmestetica.cl.",
+            text: "Clinera: https://www.clinera.io. KM Estética Profesional: https://kmestetica.cl. WhatsApp Katherine Meza: +56 9 9223 4618.",
           },
         },
       ],
@@ -240,6 +240,14 @@ export default function ClineraReclamosPage() {
             className="btn-primary"
           >
             Ir a Clinera.io
+          </a>
+          <a
+            href="https://wa.me/56992234618?text=Hola%20Katherine%2C%20te%20escribo%20por%20Clinera."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-secondary"
+          >
+            WhatsApp Katherine
           </a>
           <Link href="/#katherine" className="btn-secondary">
             Ver perfil de Katherine
