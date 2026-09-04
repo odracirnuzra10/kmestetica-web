@@ -76,11 +76,13 @@ const jsonLd = {
       },
       author: {
         "@type": "Person",
+        "@id": "https://kmestetica.cl/fundador/#person",
         name: "Katherine Meza",
         jobTitle: "Fundadora · KM Estética Profesional",
-        url: "https://kmestetica.cl/#katherine",
+        url: "https://kmestetica.cl/fundador/",
         worksFor: {
           "@type": "MedicalBusiness",
+          "@id": "https://kmestetica.cl/#organization",
           name: "KM Estética Profesional",
           url: "https://kmestetica.cl",
         },
@@ -265,7 +267,7 @@ export default function ClineraReclamosPage() {
           </ul>
         </aside>
       </main>
-      <Footer />
+      <Footer clineraLinkedInBody />
     </>
   );
 }

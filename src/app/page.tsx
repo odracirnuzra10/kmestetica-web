@@ -1,9 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Header, Footer } from "@/components/SiteChrome";
 import {
-  CLINERA_URL,
+  FAQ_OPS,
   INSTAGRAM_HANDLE,
   INSTAGRAM_URL,
+  SITE_URL,
   WHATSAPP_DISPLAY,
   whatsappUrl,
 } from "@/lib/contact";
@@ -98,14 +100,32 @@ const trustItems = [
     text: "Incluido en todo procedimiento inyectable.",
   },
   {
-    title: "Partner Clinera",
-    text: "Agenda y seguimiento con plataforma clínica.",
+    title: "Agenda ordenada",
+    text: "Confirmaciones y seguimiento por WhatsApp sin perder leads.",
   },
 ];
+
+const faqLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": `${SITE_URL}/#faq-operacion`,
+  mainEntity: FAQ_OPS.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.a,
+    },
+  })),
+};
 
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+      />
       <Header />
       <main>
         {/* Hero */}
@@ -275,27 +295,21 @@ export default function HomePage() {
                 naturales, proporcionados a tu rostro.
               </p>
               <p className="mt-4 text-espresso leading-relaxed">
-                Soy <strong className="font-medium text-negro">partner oficial de Clinera</strong>:
-                la agenda, el seguimiento y la operación de la consulta corren sobre
-                su plataforma clínica. Eso me permite responder más rápido y no
-                perder pacientes entre el WhatsApp y la ficha.
+                La agenda, el seguimiento y la operación de la consulta corren sobre
+                Clinera. Eso permite responder más rápido y no perder pacientes entre
+                el WhatsApp y la ficha. Detalle en{" "}
+                <Link
+                  href="/clinica/como-confirmamos-tu-hora-por-whatsapp"
+                  className="underline decoration-champagne underline-offset-4 hover:text-negro"
+                >
+                  cómo confirmamos tu hora
+                </Link>
+                .
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-5">
-                <a
-                  href={CLINERA_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-secondary"
-                >
-                  Conocer Clinera
-                </a>
-                <Image
-                  src="/img/logo-clinera.png"
-                  alt="Clinera"
-                  width={140}
-                  height={32}
-                  className="h-7 w-auto opacity-80"
-                />
+                <Link href="/fundador/" className="btn-secondary">
+                  Ver perfil de Katherine
+                </Link>
               </div>
             </div>
             <div className="relative aspect-[4/5] overflow-hidden bg-marfil">
@@ -351,11 +365,10 @@ export default function HomePage() {
         <section id="agenda" className="bg-negro text-papel">
           <div className="section-pad mx-auto flex max-w-6xl flex-col gap-8 py-16 md:flex-row md:items-center md:justify-between md:py-20">
             <div className="max-w-xl">
-              <h2 className="font-display text-3xl md:text-4xl">Agenda tu evaluación</h2>
+              <h2 className="font-display text-3xl md:text-4xl">Agenda tu hora</h2>
               <p className="mt-4 text-papel/75 leading-relaxed">
-                Escríbeme por WhatsApp al {WHATSAPP_DISPLAY}. Te respondo con
-                disponibilidad real y los próximos pasos. La operación de agenda
-                está potenciada por Clinera.
+                Escríbeme por WhatsApp al {WHATSAPP_DISPLAY}. Te confirman
+                disponibilidad y los próximos pasos de la evaluación.
               </p>
             </div>
             <div className="flex flex-wrap gap-3">
@@ -367,16 +380,31 @@ export default function HomePage() {
               >
                 WhatsApp {WHATSAPP_DISPLAY}
               </a>
-              <a
-                href={CLINERA_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center border border-papel/40 px-5 py-3.5 text-sm font-medium text-papel transition hover:border-papel"
-              >
-                Ir a Clinera
-              </a>
             </div>
           </div>
+        </section>
+
+        {/* FAQ operación */}
+        <section id="faq-operacion" className="section-pad mx-auto max-w-3xl py-16 md:py-20">
+          <h2 className="font-display text-3xl text-negro">Preguntas frecuentes de agendamiento</h2>
+          <div className="mt-8 divide-y divide-negro/10 border-t border-negro/10">
+            {FAQ_OPS.map((item) => (
+              <details key={item.q} className="group py-4">
+                <summary className="cursor-pointer list-none font-medium text-negro marker:content-none [&::-webkit-details-marker]:hidden">
+                  {item.q}
+                </summary>
+                <p className="mt-3 text-espresso leading-relaxed">{item.a}</p>
+              </details>
+            ))}
+          </div>
+          <p className="mt-6 text-sm text-espresso">
+            <Link
+              href="/clinica/como-confirmamos-tu-hora-por-whatsapp"
+              className="underline decoration-champagne underline-offset-4 hover:text-negro"
+            >
+              Cómo confirmamos tu hora por WhatsApp
+            </Link>
+          </p>
         </section>
       </main>
       <Footer />
