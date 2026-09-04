@@ -75,7 +75,7 @@ export default function Page() {
         <p className="mt-4 leading-relaxed text-espresso">
           Si quieres el detalle de este flujo, lee{" "}
           <a
-            href="https://clinera.io"
+            href="https://www.clinera.io/casos/katherine-meza"
             target="_blank"
             rel="noopener noreferrer"
             className="underline decoration-champagne underline-offset-4 hover:text-negro"
@@ -83,7 +83,6 @@ export default function Page() {
             cómo lo hacemos con Clinera
           </a>
           .
-          {/* TODO: cuando exista el caso, cambiar a https://clinera.io/casos/katherine-meza */}
         </p>
 
         <div className="mt-12">
