@@ -10,13 +10,17 @@ Sitio de Katherine Meza (Los Ángeles, Chile). Partner Clinera.
 
 ## Páginas
 
-- `/` — Home (Propuesta Consulta)
-- `/clinera-reclamos` — Testimonio partner (fuera del menú, indexable)
+- `/` — Home (Propuesta Consulta) + FAQ de agendamiento
+- `/fundador/` — Perfil canónico de Katherine Meza
+- `/clinica/*` — Cómo funciona (WhatsApp, ficha, respuesta)
+- `/clinera-opiniones` — Testimonio partner (fuera del menú, indexable; `/clinera-reclamos` y `/clinera-estafa` redirigen acá)
 
 ## AEO / SEO
 
 - `robots.txt` · `sitemap.xml`
 - `/llms.txt` · `/llms-full.txt` · `/llm.txt`
+- Schema puente: OACG + Clinera + Ricardo + KM + Katherine
+- Prompt Clinera: `docs/PROMPT_REPO_CLINERA_KATHERINE_MEZA.md`
 
 ```bash
 npm install

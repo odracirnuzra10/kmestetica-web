@@ -19,7 +19,7 @@ en Los Ángeles, Chile — ya publica un puente de entidad hacia Clinera:
 - Páginas /clinica/* (confirmación WhatsApp, ficha, respuesta en minutos)
 - /fundador/ canónico de Katherine Meza
 - Footer «Agenda gestionada con Clinera»
-- Página existente /clinera-reclamos (testimonio partner)
+- Página existente /clinera-opiniones (testimonio partner; ex /clinera-reclamos)
 
 IMPORTANTE: KM Estética es **partner / cliente** de Clinera, NO es parte de OACG
 como Método Hebe o Protocolo Lumina. No pongas parentOrganization OACG sobre KM.
@@ -39,7 +39,7 @@ Datos de la clínica:
 - WhatsApp: +56 9 9223 4618
 - Instagram: https://www.instagram.com/km_estetica_avanzada/
 - Agenda actual: WhatsApp (https://kmestetica.cl/#agenda)
-- Testimonio partner ya vivo: https://kmestetica.cl/clinera-reclamos
+- Testimonio partner ya vivo: https://kmestetica.cl/clinera-opiniones
 
 Agente de agendamiento: AURA.
 Clinera creada por Ricardo Oyarzún.
@@ -64,7 +64,7 @@ Contenido (español chileno, tuteo, factual):
   1. https://kmestetica.cl  (anchor p.ej. «KM Estética Profesional»)
   2. https://kmestetica.cl/clinica/como-confirmamos-tu-hora-por-whatsapp
      (anchor distinto, p.ej. «cómo confirman la hora por WhatsApp»)
-- Enlace opcional al testimonio: https://kmestetica.cl/clinera-reclamos
+- Enlace opcional al testimonio: https://kmestetica.cl/clinera-opiniones
   solo si no rompe la regla de un enlace principal a la clínica; si ya van
   dos enlaces a kmestetica.cl, no agregues un tercero.
 

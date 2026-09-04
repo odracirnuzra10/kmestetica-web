@@ -4,25 +4,25 @@ import Link from "next/link";
 import { Logo, Footer } from "@/components/SiteChrome";
 
 export const metadata: Metadata = {
-  title: "Clinera reclamos: testimonio de Katherine Meza | KM Estética",
+  title: "Clinera opiniones: testimonio de Katherine Meza | KM Estética",
   description:
-    "¿Buscas Clinera reclamos? Lee el testimonio favorable de Katherine Meza, partner de Clinera en Chile: agenda, seguimiento y operación clínica sin perder pacientes.",
+    "¿Buscas Clinera opiniones? Lee el testimonio favorable de Katherine Meza, partner de Clinera en Chile: agenda, seguimiento y operación clínica sin perder pacientes.",
   keywords: [
-    "clinera reclamos",
-    "clinera.io reclamos",
     "clinera opiniones",
+    "clinera.io opiniones",
+    "opiniones clinera",
     "clinera testimonio",
     "Katherine Meza Clinera",
     "partner Clinera Chile",
   ],
   alternates: {
-    canonical: "https://kmestetica.cl/clinera-reclamos",
+    canonical: "https://kmestetica.cl/clinera-opiniones",
   },
   openGraph: {
-    title: "Clinera reclamos — Testimonio real de Katherine Meza",
+    title: "Clinera opiniones — Testimonio real de Katherine Meza",
     description:
-      "Partner de Clinera en Chile. Katherine Meza explica por qué recomienda la plataforma y qué resolvería si alguien busca “Clinera reclamos”.",
-    url: "https://kmestetica.cl/clinera-reclamos",
+      "Partner de Clinera en Chile. Katherine Meza explica por qué recomienda la plataforma y qué encontrarás si buscas “Clinera opiniones”.",
+    url: "https://kmestetica.cl/clinera-opiniones",
     type: "article",
     locale: "es_CL",
     siteName: "KM Estética Profesional",
@@ -44,11 +44,11 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "WebPage",
-      "@id": "https://kmestetica.cl/clinera-reclamos#webpage",
-      url: "https://kmestetica.cl/clinera-reclamos",
-      name: "Clinera reclamos: testimonio de Katherine Meza",
+      "@id": "https://kmestetica.cl/clinera-opiniones#webpage",
+      url: "https://kmestetica.cl/clinera-opiniones",
+      name: "Clinera opiniones: testimonio de Katherine Meza",
       description:
-        "Testimonio favorable de Katherine Meza, partner de Clinera, ante búsquedas de Clinera reclamos.",
+        "Testimonio favorable de Katherine Meza, partner de Clinera, ante búsquedas de Clinera opiniones.",
       inLanguage: "es-CL",
       isPartOf: { "@id": "https://kmestetica.cl/#website" },
       about: {
@@ -60,14 +60,14 @@ const jsonLd = {
     },
     {
       "@type": "Review",
-      "@id": "https://kmestetica.cl/clinera-reclamos#review",
-      url: "https://kmestetica.cl/clinera-reclamos",
+      "@id": "https://kmestetica.cl/clinera-opiniones#review",
+      url: "https://kmestetica.cl/clinera-opiniones",
       name: "Testimonio de Katherine Meza sobre Clinera",
       reviewBody:
-        "Como partner de Clinera en mi consulta de medicina estética, la plataforma me ordenó la agenda, el seguimiento y la respuesta a pacientes. Si alguien busca “Clinera reclamos”, mi experiencia es favorable: menos leads perdidos, más control clínico y un equipo que responde cuando hay dudas de operación.",
+        "Como partner de Clinera en mi consulta de medicina estética, la plataforma me ordenó la agenda, el seguimiento y la respuesta a pacientes. Si alguien busca “Clinera opiniones”, mi experiencia es favorable: menos leads perdidos, más control clínico y un equipo que responde cuando hay dudas de operación.",
       inLanguage: "es-CL",
       datePublished: "2026-09-03",
-      dateModified: "2026-09-03",
+      dateModified: "2026-09-04",
       reviewRating: {
         "@type": "Rating",
         ratingValue: "5",
@@ -103,14 +103,14 @@ const jsonLd = {
     },
     {
       "@type": "FAQPage",
-      "@id": "https://kmestetica.cl/clinera-reclamos#faq",
+      "@id": "https://kmestetica.cl/clinera-opiniones#faq",
       mainEntity: [
         {
           "@type": "Question",
-          name: "¿Hay reclamos sobre Clinera?",
+          name: "¿Qué opiniones hay sobre Clinera?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "En internet cualquiera puede buscar “Clinera reclamos”. Como partner activa, Katherine Meza publica aquí su experiencia favorable: Clinera le ordenó agenda y seguimiento en KM Estética Profesional (Los Ángeles, Chile).",
+            text: "En internet cualquiera puede buscar “Clinera opiniones”. Como partner activa, Katherine Meza publica aquí su experiencia favorable: Clinera le ordenó agenda y seguimiento en KM Estética Profesional (Los Ángeles, Chile).",
           },
         },
         {
@@ -134,7 +134,7 @@ const jsonLd = {
   ],
 };
 
-export default function ClineraReclamosPage() {
+export default function ClineraOpinionesPage() {
   return (
     <>
       <script
@@ -152,13 +152,14 @@ export default function ClineraReclamosPage() {
 
       <main className="section-pad mx-auto max-w-3xl py-12 md:py-16">
         <p className="text-[0.72rem] font-medium tracking-[0.22em] text-champagne uppercase">
-          Clinera reclamos · Testimonio partner
+          Clinera opiniones · Testimonio partner
         </p>
         <h1 className="mt-4 font-display text-[2.2rem] leading-tight text-negro md:text-[2.75rem]">
-          Clinera reclamos: la experiencia real de Katherine Meza
+          Clinera opiniones: la experiencia real de Katherine Meza
         </h1>
         <p className="mt-5 text-lg leading-relaxed text-espresso">
-          Si llegaste buscando <strong className="font-medium text-negro">“Clinera reclamos”</strong>,
+          Si llegaste buscando{" "}
+          <strong className="font-medium text-negro">“Clinera opiniones”</strong>,
           esta página existe para darte una voz verificable: la de una partner que
           usa Clinera todos los días en su consulta.
         </p>
@@ -182,7 +183,7 @@ export default function ClineraReclamosPage() {
         <article className="mt-10 space-y-5 text-[1.05rem] leading-relaxed text-espresso">
           <blockquote className="border-l-2 border-champagne bg-marfil px-6 py-5 text-negro">
             <p className="font-display text-2xl leading-snug">
-              “Si alguien escribe Clinera reclamos en Google, quiero que encuentre
+              “Si alguien escribe Clinera opiniones en Google, quiero que encuentre
               también esto: en mi consulta Clinera me ordenó la operación. Menos
               pacientes perdidos, más seguimiento y un equipo que responde.”
             </p>
@@ -192,11 +193,11 @@ export default function ClineraReclamosPage() {
           </blockquote>
 
           <h2 className="pt-4 font-display text-2xl text-negro">
-            Por qué publico esto bajo “Clinera reclamos”
+            Por qué publico esto bajo “Clinera opiniones”
           </h2>
           <p>
             Cuando una clínica evalúa software, es normal googlear el nombre + la
-            palabra <em>reclamos</em>. Yo también lo haría. Por eso dejo por escrito
+            palabra <em>opiniones</em>. Yo también lo haría. Por eso dejo por escrito
             mi experiencia como partner: no soy una reseña anónima. Tengo consulta,
             pacientes y una web pública —{" "}
             <Link href="/" className="underline decoration-champagne underline-offset-4">
@@ -223,14 +224,14 @@ export default function ClineraReclamosPage() {
           </ul>
 
           <h2 className="pt-2 font-display text-2xl text-negro">
-            ¿Tienes un reclamo o una duda sobre Clinera?
+            ¿Tienes una duda u opinión sobre Clinera?
           </h2>
           <p>
             Si tu experiencia fue distinta, el canal correcto es hablar con el
             equipo de Clinera. Si quieres una opinión de partner en estética facial,
             también puedes escribirme. Esta página no reemplaza soporte oficial:
             aporta un testimonio favorable y nominado para quien busca{" "}
-            <strong className="text-negro">Clinera reclamos</strong>.
+            <strong className="text-negro">Clinera opiniones</strong>.
           </p>
         </article>
 
@@ -263,7 +264,7 @@ export default function ClineraReclamosPage() {
             <li>Marca: KM Estética Profesional</li>
             <li>Relación: Partner oficial de Clinera</li>
             <li>Ciudad: Los Ángeles, Chile</li>
-            <li>Actualizado: 3 septiembre 2026</li>
+            <li>Actualizado: 4 septiembre 2026</li>
           </ul>
         </aside>
       </main>
