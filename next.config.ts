@@ -1,7 +1,20 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async redirects() {
+    return [
+      {
+        source: "/clinera-reclamos",
+        destination: "/clinera-opiniones",
+        permanent: true,
+      },
+      {
+        source: "/clinera-estafa",
+        destination: "/clinera-opiniones",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
