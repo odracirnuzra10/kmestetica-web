@@ -11,7 +11,8 @@ Sitio de Katherine Meza (Los Ángeles, Chile). Partner Clinera.
 ## Páginas
 
 - `/` — Home (Propuesta Consulta)
-- `/clinera-reclamos` — Testimonio partner (fuera del menú, indexable)
+- `/clinera-opiniones` — Testimonio partner (fuera del menú, indexable)
+- `/clinera-reclamos` y `/clinera-estafa` redirigen 308 a `/clinera-opiniones`
 
 ## AEO / SEO
 
