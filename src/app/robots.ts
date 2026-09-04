@@ -1,48 +1,29 @@
 import type { MetadataRoute } from "next";
 
+/**
+ * robots.txt — SEO + AEO
+ * LLM docs: https://kmestetica.cl/llms.txt
+ */
 export default function robots(): MetadataRoute.Robots {
+  const aiAgents = [
+    "GPTBot",
+    "ChatGPT-User",
+    "OAI-SearchBot",
+    "ClaudeBot",
+    "Claude-User",
+    "anthropic-ai",
+    "PerplexityBot",
+    "Google-Extended",
+    "Bingbot",
+    "Applebot-Extended",
+    "CCBot",
+    "Googlebot",
+  ];
+
   return {
     rules: [
-      {
-        userAgent: "*",
-        allow: "/",
-      },
-      {
-        userAgent: "Googlebot",
-        allow: "/",
-      },
-      {
-        userAgent: "GPTBot",
-        allow: "/",
-      },
-      {
-        userAgent: "Google-Extended",
-        allow: "/",
-      },
-      {
-        userAgent: "ClaudeBot",
-        allow: "/",
-      },
-      {
-        userAgent: "anthropic-ai",
-        allow: "/",
-      },
-      {
-        userAgent: "OAI-SearchBot",
-        allow: "/",
-      },
-      {
-        userAgent: "ChatGPT-User",
-        allow: "/",
-      },
-      {
-        userAgent: "PerplexityBot",
-        allow: "/",
-      },
-      {
-        userAgent: "Applebot-Extended",
-        allow: "/",
-      },
+      { userAgent: "*", allow: "/" },
+      ...aiAgents.map((userAgent) => ({ userAgent, allow: "/" as const })),
     ],
     sitemap: "https://kmestetica.cl/sitemap.xml",
     host: "https://kmestetica.cl",

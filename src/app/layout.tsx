@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Marcellus, DM_Sans, DM_Mono } from "next/font/google";
 import "./globals.css";
+import { SITE_URL, puenteGraph } from "@/lib/contact";
 
 const marcellus = Marcellus({
   weight: "400",
@@ -22,38 +23,35 @@ const dmMono = DM_Mono({
   display: "swap",
 });
 
-const siteUrl = "https://kmestetica.cl";
-
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "KM Estética Profesional | Katherine Meza — Los Ángeles",
     template: "%s | KM Estética Profesional",
   },
   description:
-    "Medicina estética facial con enfoque personalizado en Los Ángeles, Chile. Katherine Meza, partner Clinera. Evaluación profesional y resultados naturales.",
+    "Medicina estética facial con enfoque personalizado en Los Ángeles, Chile. Evaluación profesional, plan escrito y resultados naturales. Agenda por WhatsApp.",
   keywords: [
     "estética facial Los Ángeles",
     "Katherine Meza",
     "KM Estética",
     "toxina botulínica",
     "ácido hialurónico",
-    "partner Clinera",
     "medicina estética Chile",
   ],
-  authors: [{ name: "Katherine Meza", url: siteUrl }],
+  authors: [{ name: "Katherine Meza", url: `${SITE_URL}/fundador/` }],
   creator: "Katherine Meza",
   alternates: {
-    canonical: siteUrl,
+    canonical: SITE_URL,
   },
   openGraph: {
     type: "website",
     locale: "es_CL",
-    url: siteUrl,
+    url: SITE_URL,
     siteName: "KM Estética Profesional",
     title: "KM Estética Profesional | Katherine Meza",
     description:
-      "Medicina estética con enfoque personalizado. Partner oficial de Clinera.",
+      "Medicina estética facial en Los Ángeles, Chile. Evaluación personalizada y resultados naturales.",
     images: [
       {
         url: "/img/katherine-meza.jpg",
@@ -66,7 +64,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "KM Estética Profesional | Katherine Meza",
-    description: "Medicina estética facial · Los Ángeles · Partner Clinera",
+    description: "Medicina estética facial · Los Ángeles, Chile",
     images: ["/img/katherine-meza.jpg"],
   },
   icons: {
@@ -83,60 +81,12 @@ export const metadata: Metadata = {
   },
 };
 
-const orgJsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebSite",
-      "@id": `${siteUrl}/#website`,
-      url: siteUrl,
-      name: "KM Estética Profesional",
-      inLanguage: "es-CL",
-      publisher: { "@id": `${siteUrl}/#org` },
-    },
-    {
-      "@type": "MedicalBusiness",
-      "@id": `${siteUrl}/#org`,
-      name: "KM Estética Profesional",
-      url: siteUrl,
-      image: `${siteUrl}/img/katherine-meza.jpg`,
-      description:
-        "Consulta de medicina estética facial en Los Ángeles, Chile. Fundada por Katherine Meza. Partner Clinera.",
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Los Ángeles",
-        addressCountry: "CL",
-      },
-      telephone: "+56992234618",
-      founder: { "@id": `${siteUrl}/#katherine` },
-      employee: { "@id": `${siteUrl}/#katherine` },
-      knowsAbout: [
-        "Toxina botulínica",
-        "Ácido hialurónico",
-        "Bioestimulación",
-        "Mesoterapia",
-        "Depilación láser",
-      ],
-      sameAs: ["https://www.clinera.io"],
-    },
-    {
-      "@type": "Person",
-      "@id": `${siteUrl}/#katherine`,
-      name: "Katherine Meza",
-      jobTitle: "Fundadora",
-      image: `${siteUrl}/img/katherine-meza.jpg`,
-      url: `${siteUrl}/#katherine`,
-      worksFor: { "@id": `${siteUrl}/#org` },
-      knowsAbout: ["Medicina estética facial", "Clinera"],
-    },
-  ],
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const orgJsonLd = puenteGraph();
   return (
     <html lang="es-CL">
       <body className={`${marcellus.variable} ${dmSans.variable} ${dmMono.variable} antialiased`}>
